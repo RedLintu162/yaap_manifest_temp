@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="github"
+           fetch="https://github.com/" />
+
+  <remote  name="gitlab"
+           fetch="https://gitlab.com/" />
+
+  <remote  name="yaap"
+           fetch="https://github.com/yaap"
+           revision="refs/heads/fourteen" />
+
+  <remote  name="PeterCxy"
+           fetch="https://gitea.angry.im/PeterCxy"
+           revision="refs/heads/master" />
+
+  <!-- General -->
+  <project path="art" name="art" remote="yaap" />
+  <project path="bootable/recovery" name="bootable_recovery" remote="yaap" />
+  <project path="bionic" name="bionic" remote="yaap" />
+  <project path="manifest" name="yaap/manifest" remote="github" revision="fourteen" />
+
+
+  <project path="device/qcom/sepolicy_vndr/sm8650" name="device_qcom_sepolicy_vndr_sm8650" remote="yaap" />
+
+
+
+  <project path="hardware/qcom-caf/sm8650/audio/agm" name="vendor_qcom_opensource_agm-sm8650" remote="yaap" />
+  <project path="hardware/qcom-caf/sm8650/audio/pal" name="vendor_qcom_opensource_arpal-lx-sm8650" remote="yaap" />
+  <project path="hardware/qcom-caf/sm8650/audio/primary-hal" name="hardware_qcom_audio-ar-sm8650" remote="yaap" />
+  <project path="hardware/qcom-caf/sm8650/dataipa" name="vendor_qcom_opensource_dataipa-sm8650" remote="yaap" />
+  <project path="hardware/qcom-caf/sm8650/data-ipa-cfg-mgr" name="vendor_qcom_opensource_data-ipa-cfg-mgr-sm8650" rem>  <project path="hardware/qcom-caf/sm8650/display" name="hardware_qcom-caf_sm8650_display" remote="yaap" />
+  <project path="hardware/qcom-caf/sm8650/media" name="hardware_qcom-caf_sm8650_media" remote="yaap" />
+
+
+  <project path="hardware/qcom-caf/common" remote="yaap" name="hardware_qcom-caf_common" >
+    <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8650/audio/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8650/Android.bp" />
+</project>
+
+</manifest>
